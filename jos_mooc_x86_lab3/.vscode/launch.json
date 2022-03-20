@@ -1,0 +1,48 @@
+{
+    "configurations": [
+        {
+            "name": "boot-debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "miDebuggerServerAddress": "127.0.0.1:1234",
+            "program": "${workspaceFolder}/obj/bootblock.o",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "logging": {
+                "engineLogging": true
+            },
+            "MIMode": "gdb",
+            // "miDebuggerPath": "gdb",
+            "miDebuggerArgs": "-nx -q",
+            "preLaunchTask": "gdb_server",
+            "setupCommands": [
+            ],
+
+        },
+        {
+            "name": "kernel-debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "miDebuggerServerAddress": "127.0.0.1:1234",
+            "program": "${workspaceFolder}/bin/kernel",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "logging": {
+                "engineLogging": true
+            },
+            "MIMode": "gdb",
+            "miDebuggerArgs": "-nx -q",
+            "preLaunchTask": "gdb_server",
+            "setupCommands": [
+                {"text": "add-symbol-file ${workspaceFolder}/bin/kernel 0x100000"},
+            ],
+
+        }
+    ]
+}

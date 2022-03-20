@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/",
+                "${workspaceFolder}/libs",
+                "${workspaceFolder}/kern/driver",
+                "${workspaceFolder}/kern/debug",
+                "${workspaceFolder}/kern/trap",
+                "${workspaceFolder}/kern/mm",
+                "${workspaceFolder}/kern/sync",
+                "${workspaceFolder}/kern/process",
+                "${workspaceFolder}/kern/fs"
+            ],
+            "defines": [
+                "JOS_KERNEL=1"
+            ],
+            "intelliSenseMode": "linux-clang-x86",
+            "configurationProvider": "ms-vscode.makefile-tools"
+        }
+    ],
+    "version": 4
+}
